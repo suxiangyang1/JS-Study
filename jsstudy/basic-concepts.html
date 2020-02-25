@@ -46,40 +46,40 @@
       // console.log(y != '5')
 
       /* 实战练习 */
-      // function getLevel(par, strokes) {
-      //   if (strokes === 1) {
-      //     return 'Hole-in-one'
-      //   }
-      //   if (strokes <= par - 2) {
-      //     return 'Eagle'
-      //   }
-      //   if ((strokes = par - 1)) {
-      //     return 'Birdie'
-      //   }
-      //   if ((strokes = par + 1)) {
-      //     return 'Par'
-      //   }
-      //   if ((strokes = par + 2)) {
-      //     return 'Double Bogey'
-      //   }
-      //   if (strokes >= par + 3) {
-      //     return 'Go Home'
-      //   }
-      // }
+      function getLevel(par, strokes) {
+        if (strokes === 1) {
+          return 'Hole-in-one'
+        }
+        if (strokes <= par - 2) {
+          return 'Eagle'
+        }
+        if ((strokes = par - 1)) {
+          return 'Birdie'
+        }
+        if ((strokes = par + 1)) {
+          return 'Par'
+        }
+        if ((strokes = par + 2)) {
+          return 'Double Bogey'
+        }
+        if (strokes >= par + 3) {
+          return 'Go Home'
+        }
+      }
 
       // document.write(getLevel(3, 7))
 
       /* 字符串 */
       //通过索引位置获取字符
-      var coursname = 'I love World'
-      var getStr = coursname[5]
-      document.write(getStr + '</br>')
-      var myName = 'yangsuxiang'
-      var nameLenght = myName.length
-      //字符串的不可变性
-      var myStr = 'Smith'
-      myName[0] = 'T'
-      document.write(myStr) //输出内容依然为Smith
+      //   var coursname = 'I love World'
+      //   var getStr = coursname[5]
+      //   document.write(getStr + '</br>')
+      //   var myName = 'yangsuxiang'
+      //   var nameLenght = myName.length
+      //   //字符串的不可变性
+      //   var myStr = 'Smith'
+      //   myName[0] = 'T'
+      //   document.write(myStr) //输出内容依然为Smith
     </script>
   </body>
 </html>
