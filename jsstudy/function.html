@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* js函数 */
+      function Summation(a, b) {
+        return a * b
+      }
+      var res = Summation(4, 3)
+      document.write(res + '</br>')
+
+      //函数隐藏式参数
+      function sum() {
+        return arguments[0] + arguments[1]
+      }
+      document.write(sum(1, 2) + '</br>')
+
+      function sayHello(name, age) {
+        return name + '年龄是：' + age + '岁'
+      }
+      document.write(sayHello('John', 23))
+
+      js中的弹出框
+      Alert警告框
+      alert('Hello World')
+      prompt提示框
+      var user = prompt('请输入你的名字:')
+      alert(user)
+      //confirm确认框
+      var result = confirm('你确定要离开这个页面')
+      if (result == true) {
+        alert('感谢您的光临')
+      } else {
+        alert('感谢您继续使用我们的服务')
+      }
+    </script>
+  </body>
+</html>
