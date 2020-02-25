@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js-Basic-Concepts</title>
+  </head>
+  <body>
+    <script>
+      /* js变量 */
+      // var x1 = 100
+      // var x2 = 'Hello world'
+      // /* typeof   检查变量的类型，返回一个字符串 */
+      // document.write(typeof x1 + '</br>')
+      // document.write(x1 + '</br>')
+      // document.write(typeof x2)
+
+      /* js数据类型 */
+      // var favourite = 'Taylor Swift   And   The Chainsmokers'
+      // var age = 21
+      // var male = true
+      // var girlfried = null //指空值
+      // var lg = undefined //指没有值
+      // var hobby = {
+      //   sports: 'Cycling',
+      //   movie: '百鸟朝凤'
+      // }
+      // var name = "He is called 'Smith'"
+      // var name = 'He is called"Smith"'
+      // document.write(typeof girlfried + '</br>')
+      // document.write(typeof lg)
+
+      /* js运算符 */
+      //几个重要的
+      // typeof { lift: 42 } === 'object' //true
+      // typeof Symbol() === 'symbol' //true
+      // //null类型，处理的由问题，正确返回的结果是true，but下面返回的是object
+      // document.write(typeof null + '</br>')
+      // var x = 3
+      // var y = 4
+      // var count = x + 2 * y * x + y
+      // document.write(count)
+      // //比较运算符
+      // var x = 24
+      // console.log(x <= 7)
+      // console.log(y != '5')
+
+      /* 实战练习 */
+      // function getLevel(par, strokes) {
+      //   if (strokes === 1) {
+      //     return 'Hole-in-one'
+      //   }
+      //   if (strokes <= par - 2) {
+      //     return 'Eagle'
+      //   }
+      //   if ((strokes = par - 1)) {
+      //     return 'Birdie'
+      //   }
+      //   if ((strokes = par + 1)) {
+      //     return 'Par'
+      //   }
+      //   if ((strokes = par + 2)) {
+      //     return 'Double Bogey'
+      //   }
+      //   if (strokes >= par + 3) {
+      //     return 'Go Home'
+      //   }
+      // }
+
+      // document.write(getLevel(3, 7))
+
+      /* 字符串 */
+      //通过索引位置获取字符
+      var coursname = 'I love World'
+      var getStr = coursname[5]
+      document.write(getStr + '</br>')
+      var myName = 'yangsuxiang'
+      var nameLenght = myName.length
+      //字符串的不可变性
+      var myStr = 'Smith'
+      myName[0] = 'T'
+      document.write(myStr) //输出内容依然为Smith
+    </script>
+  </body>
+</html>
