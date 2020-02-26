@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      /* js数组 */
+
+      //创建
+      var myCars = new Array('BWM', 'SAAB', 'VOLVO')
+      //添加元素
+      myCars[3] = 'LINCOLN'
+      document.write(myCars + '</br>')
+
+      //数组方法
+
+      //.push()方法   添加元素
+      var a = []
+      //最简单的添加元素的方法
+      a[0] = 'zero'
+      //利用psuh()在数组末尾添加一个或多个方法
+      a.push('one')
+      a.push('two')
+      document.write(a)
+      //pop()方法  抛出一个数组末尾的值
+      var oneDown = [1, 4, 6].pop() //输出内容为oneDown=[1,4]
+      //shift()方法    移除数组末尾第一个值
+      var oneDown = [1, 4, 6].shift() //输出内容为[4,6]
+      //unshift()方法  是在数组的头部添加元素
+      var c = ['HTML', 'CSS']
+      c.unshift('JAVASCRIPT')
+      //concat()方法    连接数组，并且创建一个全新的数组
+      var c1 = ['Html', 'Css']
+      var c2 = ['JS', 'Java']
+      var courses = c1.concat(c2)
+
+      //foreah()方法
+      var numbers = [64, 52, 72, 11, 49]
+      function myFunction(item, index) {
+        var demo = document.getElementById('demo')
+        demo.innerHTML = demo.innerHTML + 'index[' + index + ']:' + item + '</br>'
+      }
+      numbers.forEach(myFunction)
+
+      //slice
+      var fruits = ['apple', 'banana', 'lemon', 'orange', 'mango']
+      var citrus = fruits.slice(1, 3)
+      //关联函数
+      var person = []
+      person['name'] = 'Loren'
+      person['age'] = 18
+      console.log(person.age)
+    </script>
+  </body>
+</html>
