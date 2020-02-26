@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* js中的对象 */
+      var person = {
+        name: '张三',
+        age: 21,
+        gender: 'male'
+      }
+      console.log(person.name)
+      console.log(person.gender.length)
+
+      var ourDog = {
+        name: 'Camper',
+        legs: 4,
+        tails: 1,
+        feiends: ['everything']
+      }
+      //更改上面的属性
+      ourDog.name = 'Happer Camper' //或者是下面的方法
+      //   ourDog['name'] = 'Happer Camper'
+      //添加属性
+      ourDog.bark = 'bow-wow'
+      //删除属性
+      var c1 = ourDog['tails'] //输出内容为 1,即c1=1
+      delete ourDog.tails
+      var c2 = ourDog['tails'] //输出内容为undefined
+      console.log(ourDog)
+
+      /*
+      调用方法  ：   对象名.方法名()
+       */
+      var message = 'Hello World'
+      var x = message.toUpperCase()
+      document.write(x)
+
+      //使用[] 读取对象属性
+      var a = 'age'
+      var myObject = {
+        name: 'Loen',
+        age: '28',
+        eat: function() {
+          return "I'm  eating"
+        }
+      }
+      console.log(myObject['name'])
+      console.log(a)
+      console.log(myObject['eat']()) //返回"I'm eating"
+
+      //构造对象
+      function people(firstname, lastname, age, eyecolor) {
+        ;(this.firstname = firstname), (this.lastname = lastname), (this.age = age), (this.eyecolor = eyecolor)
+      }
+      var myFather = new people('John', 'Smith', 39, 'green')
+      var myMother = new people('Sally', 'Jane', 38, 'blue')
+      console.log(myFather)
+
+      //对象初始化
+      //创建单个对象    (使用对象初始化器的时候，空格和换行符并不重要，对象定义可以跨多行)
+      var john = { name: 'John', age: 26 }
+      var jack = { name: 'Jack', age: 29 }
+
+      //在构造函数中定义方法
+      //   function man(name, age) {
+      //     this.name = name
+      //     this.age = age
+      //     this.ChangeName = function(name) {
+      //       this.name = name
+      //     }
+      //   }
+      //   var p = new man('John', 30)
+      //   var y = p.ChangeName('Loren')
+      //   console.log(y)
+      //关联外部函数
+      function male(nam, ag) {
+        this.nam = nam
+        this.ag = ag
+        this.yearofBirth = this.bornYear
+      }
+      function bornYear() {
+        return new Date().getFullYear - this.ag
+      }
+      console.log(male('张三', 29))
+    </script>
+  </body>
+</html>
