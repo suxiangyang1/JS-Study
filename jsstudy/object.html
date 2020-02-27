@@ -81,12 +81,14 @@
       function male(nam, ag) {
         this.nam = nam
         this.ag = ag
-        this.yearofBirth = this.bornYear
+        this.yearofBirth = bornYear
       }
       function bornYear() {
-        return new Date().getFullYear - this.ag
+        return new Date().getFullYear() - this.ag
       }
-      console.log(male('张三', 29))
+      var mm = new male('qq', 30)
+      var hh = bornYear.apply(mm, [])
+      console.log(hh)
     </script>
   </body>
 </html>
