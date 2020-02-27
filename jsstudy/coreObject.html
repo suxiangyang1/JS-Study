@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* js中的对象 */
+      //1.String对象
+
+      //创建
+      var txt = new String('String')
+      var txt1 = 'String'
+      var a = txt1.charAt(2)
+      var b = txt.concat(txt1)
+      var c = b.includes('ing')
+      console.log(c)
+      //js中的slice方法
+      var str = 'Hello world'
+      var n = str.slice(1, 5) //输出ello(可以看出包含1，但是不包含5)
+      var n1 = str.slice(0) //输出Hello world
+      var n2 = str.slice(1) //输出e
+      //js中的split方法(将一个字符串分割成一个字符串数组)
+      var f = 'How are you doing today?'
+      var g = f.split() //输出How are you doing today
+      var g1 = f.split('') //输出H,o,w, ,a,r,e, ,y,o,u, ,d,o,i,n,g, ,t,o,d,a,y,?(分割字符，包含空格)
+      var g2 = f.split(' ', 3) //输出How,are,you
+      var g3 = f.split('o') //输出H,w are y,u d,ing t,day?
+
+      //windows对象
+      var winInnerHeight = window.innerHeight //返回窗口的文档显示区高度
+      var winInnerWidth = window.innerWidth //返回窗口的文档显示区宽度
+      var winOuterWidth = window.outerWidth //返回窗口的外部宽度，包含工具条与滚动条
+      var winOuterHeight = window.outerHeight //返回窗口的外部高度，包含工具条与滚动条
+      var winScreenLeft = window.screenLeft //返回相对于窗口的x坐标
+      var winScreenTop = window.screenTop //返回相对于屏幕窗口的y坐标
+      //windows对象方法
+
+      //json实例
+      var text =
+        '{ "sites" : [' +
+        '{ "name":"Runoob" , "url":"www.runoob.com" },' +
+        '{ "name":"Google" , "url":"www.google.com" },' +
+        '{ "name":"Taobao" , "url":"www.taobao.com" } ]}'
+      //调用   利用Json.parse()将json 转换为对象
+      obj = JSON.parse(text)
+      //obj.sites[1].name + obj.sites[1].url
+
+      var str = { name: 'javascrip', site: 'http://www.runoob.com' }
+      str_pretty1 = JSON.stringify(str)
+      document.write('只有一个参数情况：')
+      document.write('<br>')
+      document.write('<pre>' + str_pretty1 + '</pre>')
+      document.write('<br>')
+      str_pretty2 = JSON.stringify(str, null, 4) //使用四个空格缩进
+      document.write('使用参数情况：')
+      document.write('<br>')
+      document.write('<pre>' + str_pretty2 + '</pre>') // pre 用于格式化输出
+
+      //Math()方法
+      document.write(Math.PI + '</br>')
+      var number1 = Math.sqrt(4)
+      var number2 = Math.round(3.5)
+      document.write(number2)
+      //floor()方法
+      Math.floor(45.95)
+      Math.floor(40.1)
+      Math.random() //返回一个介于0（包含0）到1（不包含1）之间的额一个随机数
+      //想返回一个1到100之间的随机数
+      Math.floor(Math.random() * 100) + 1
+      //任意值到任意值的随机数
+      //   Math.floor(Math.random() * (max - min + 1) + min)
+
+      //Date()对象的使用
+      var d = new Date() //存储当前的日期和时间
+      //初始化日期的方法
+      //   new Date(milliseconds)//毫秒
+      //   new Date(dateString)//日期字符串
+      //   new Date(year,month,day,hours,minutes,seconds,milliseconds)
+
+      function printTime() {
+        var date = new Date()
+        hours = date.getHours()
+        minutes = date.getMinutes()
+        seconds = date.getSeconds()
+        console.log(hours + ' ' + minutes + ' ' + seconds)
+      }
+      //   setInterval(printTime, 1000)
+    </script>
+  </body>
+</html>
