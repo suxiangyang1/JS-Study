@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <br>
+    <p>这边显示</p>
+    <p>那边显示</p>
+    <hr />
+    <p onclick="clickfn()">点我看看</p>
+    <br>
+    <input type="text" onfocus="foucusfn()" onblur="blurfn()">
+    <div onmouseover="movefn()" onmouseout="moutfn()">点进来看看</div>
+
+    //
+    <div>
+        <button>
+            上一张
+        </button>
+        <img src="1.jpg" alt="图片">
+        <button>
+            下一张
+        </button>
+    </div>
+
+    <script>
+        var images = [
+            '2.jpg',
+            '3.jpg',
+            '4.jpg',
+            '5.jpg',
+            '6.jpg'
+        ];
+        var num =0
+        function next() {
+            var slider = document.getElementById('slider')
+            num++
+            if(num >=images.length) {
+                num =0;
+            }
+            slider.src = images[num]
+        }
+        function prev() {
+            var slider = document.getElementById('slider')
+            num--
+            if(num <0) {
+                num = images.length - 1;
+            }
+            slider.src = images[num]
+        }
+    </script>
+  </body>
+</html>
